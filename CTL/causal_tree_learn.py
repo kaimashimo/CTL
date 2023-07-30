@@ -69,9 +69,9 @@ class CausalTree(_CausalTree):
 
     def fit(self, x, y, t):
         self.column_num = x.shape[1]
-        x = x.astype(np.float)
-        y = y.astype(np.float)
-        t = t.astype(np.float)
+        x = x.astype(float)
+        y = y.astype(float)
+        t = t.astype(float)
         self.tree.fit(x, y, t)
         self.fitted = True
         self.tree_depth = self.tree.tree_depth
